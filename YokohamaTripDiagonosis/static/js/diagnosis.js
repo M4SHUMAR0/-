@@ -1,4 +1,5 @@
 window.onload=function(){
+    console.log("読み込み完了")
     let q1,q2,q3;
 
     q1=document.getElementById("q1");
