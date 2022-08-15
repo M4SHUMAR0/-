@@ -1,0 +1,16 @@
+{% load static %}
+{% if member=="multiple" %}
+    {% if total > 2 %}
+        {% extend "result2.html" %}
+    {% else %}
+        {% extend "result4.html" %}
+    {% endif %}
+{% else %}
+    {% if total > 2 %}
+        {% extend "result1.html" %}
+    {% else %}
+        {% extend "result3.html" %}
+    {% endif %}
+{% endif %}
+
+
