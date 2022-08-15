@@ -26,5 +26,4 @@ urlpatterns = [
     path('result2/', result2.result2,name="result2"),
     path('result3/', result3.result3,name="result3"),
     path('result4/', result4.result4,name="result4"),
-    # re_path(r'^diagnosis/', include('diagnosis.urls')),
 ]
