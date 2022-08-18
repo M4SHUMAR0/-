@@ -29,7 +29,7 @@ def result(request):
     else:
         grade_pace=0
     total=grade_price+grade_personality+grade_pace
-    return render(request,"templates/diagnosis.html",{"price":price,"personality":personality,"pace":pace,"member":member,"total":total})
+    return render(request,"result.html",{"price":price,"personality":personality,"pace":pace,"member":member,"total":total})
 
 def result1(request):
     return render(request, 'result1.html')
