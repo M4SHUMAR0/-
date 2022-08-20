@@ -3,34 +3,14 @@
 {% if member == "multiple" %}
     {% if 0 <= total and total <= 2 %}
         {% include "result4.html" %}
-        <p>price is {{price}}</p>
-        <p>personality is {{personality}}</p>
-        <p>pace is {{pace}}</p>
-        <p>member is {{member}}</p>
-        <p>total is {{total}}</p>
     {% else %}
         {% include "result2.html" %}
-        <p>price is {{price}}</p>
-        <p>personality is {{personality}}</p>
-        <p>pace is {{pace}}</p>
-        <p>member is {{member}}</p>
-        <p>total is {{total}}</p>
     {% endif %}
 {% else %}
     {% if 0 <= total and total <= 2 %}
         {% include "result3.html" %}
-        <p>price is {{price}}</p>
-        <p>personality is {{personality}}</p>
-        <p>pace is {{pace}}</p>
-        <p>member is {{member}}</p>
-        <p>total is {{total}}</p>
     {% else %}
         {% include "result1.html" %}
-        <p>price is {{price}}</p>
-        <p>personality is {{personality}}</p>
-        <p>pace is {{pace}}</p>
-        <p>member is {{member}}</p>
-        <p>total is {{total}}</p>
     {% endif %}    
 {% endif %}
 
