@@ -1,83 +1,59 @@
+{% extends "result_base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf8">
-        <title>1分であなたのプランが分かる！日帰り横浜旅行プラン診断コンテンツ</title>
-        <meta name="dicription" content="あなたにぴったりな横浜旅行プランを1分でご提案します！">
-        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
-        <!-- django -->
-        <link rel="stylesheet" href="{% static 'default.css' %}">
-        <link rel="stylesheet" href="{% static 'result.css' %}">
-    </head>
-    <body>
-        <header>
-            <div id="header">
-                <div id="header_img">
-                    <img src="{% static 'byoutabi.png' %}">
-                </div>
-                <div id="header_background">
-                </div>
-            </div>
-        </header>
-        <div class="body">
-            <div class="main">
-                <div class="copy-container">
-                  <h1>あなたにおすすめの旅行先は...</h1>
-                  <h2><span>八景島シーパラダイス</span>です</h2>
-                </div>
-                
-                <div class="contents">
-                  <h3 class="section-title">場所</h3>
-                  <div class="contents-item">
-                    <div class="place">
-                        <div>
-                            <img src="{% static 'result/hakkeijima1.png' %}" alt="">
-                        </div>
-                        <div>
-                            <h5>・八景島シーパラダイス</h5>
-                            <p>横浜・八景島シーパラダイスは、テーマの異なる４つの水族館や、絶叫マシーンなどさまざまなアトラクションからなる複合型アミューズメントアイランドです。国内最多5万尾のイワシの大群泳や、海の動物たちのショーは必見です。海をテーマにしたアトラクションは、子どもから大人まで楽しめる内容。島の中には、ショップや多彩なレストランからなる『ベイマーケット』やBBQが楽しめる「Seafood&Grill YAKIYA」やホテル「シーパラダイスイン」なども揃い、一日中楽しめる観光スポットです。</p>
-                        </div>
-                    </div>
-                    
-                    
-                  </div>
-                  <h3 class="section-title">旅行プラン💛</h3>
-                  <div class="contents-item">
-                    <h4>12:00　八景島駅で待ち合わし、シーパラダイス内のレストランで食事</h4>    
-                    <h4>13:10　飼育スペースに向かう</h4>
-                    <h4>14:10　シーパラダイス内のショッピングセンターで少し休憩</h4>
-                    <h4>14:40　ショッピングセンターを出て、アトラクション＆散歩</h4>
-                    <h4>16:45　水族館に向かう</h4>
-                    <h4>17:00　水族館(夜の部)に入場する</h4>
-                    <h4>19:00　水族館を出て、駅に向かう</h4>
-                    <h4>19:20　電車で帰る</h4>
-                  </div>
-                </div>
 
-                <div class="rate-form">
-                    <h3 class="section-title">評価</h3>
-                    <div class="rate-star">
-                        <input id="star5" type="radio" name="rate" value="5">
-                        <label for="star5">★</label>
-                        <input id="star4" type="radio" name="rate" value="4">
-                        <label for="star4">★</label>
-                        <input id="star3" type="radio" name="rate" value="3">
-                        <label for="star3">★</label>
-                        <input id="star2" type="radio" name="rate" value="2">
-                        <label for="star2">★</label>
-                        <input id="star1" type="radio" name="rate" value="1">
-                        <label for="star1">★</label>
-                    </div>
-                </div>
-                
-        </div>
-        <!-- Bootatrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    </body>
-</html>
+{% block headline %}
+<div class="copy-container">
+    <h1>あなたにおすすめの旅行先は...</h1>
+    <h2><span>八景島シーパラダイス</span>です</h2>
+</div>
+{% endblock %}
+
+
+{% block multicolumn %}
+<h3 class="section-title">場所</h3>
+<div class="contents-item">
+  <div class="place">
+      <div>
+          <img src="{% static 'img/result/hakkeijima1.png' %}" alt="">
+      </div>
+      <div>
+          <h5>・八景島シーパラダイス</h5>
+          <p>横浜・八景島シーパラダイスは、テーマの異なる４つの水族館や、絶叫マシーンなどさまざまなアトラクションからなる複合型アミューズメントアイランドです。国内最多5万尾のイワシの大群泳や、海の動物たちのショーは必見です。海をテーマにしたアトラクションは、子どもから大人まで楽しめる内容。島の中には、ショップや多彩なレストランからなる『ベイマーケット』やBBQが楽しめる「Seafood&Grill YAKIYA」やホテル「シーパラダイスイン」なども揃い、一日中楽しめる観光スポットです。</p>
+      </div>
+  </div>     
+</div> 
+{% endblock %}
+
+
+{% block summary %}
+<h3 class="section-title">旅行プラン💛</h3>
+<div class="contents-item">
+    <h4>12:00　八景島駅で待ち合わし、シーパラダイス内のレストランで食事</h4>    
+    <h4>13:10　飼育スペースに向かう</h4>
+    <h4>14:10　シーパラダイス内のショッピングセンターで少し休憩</h4>
+    <h4>14:40　ショッピングセンターを出て、アトラクション＆散歩</h4>
+    <h4>16:45　水族館に向かう</h4>
+    <h4>17:00　水族館(夜の部)に入場する</h4>
+    <h4>19:00　水族館を出て、駅に向かう</h4>
+    <h4>19:20　電車で帰る</h4>
+</div>
+{% endblock %}
+
+
+{% block evaluation%}
+<div class="rate-form">
+    <h3 class="section-title">評価</h3>
+    <div class="rate-star">
+        <input id="star5" type="radio" name="rate" value="5">
+        <label for="star5">★</label>
+        <input id="star4" type="radio" name="rate" value="4">
+        <label for="star4">★</label>
+        <input id="star3" type="radio" name="rate" value="3">
+        <label for="star3">★</label>
+        <input id="star2" type="radio" name="rate" value="2">
+        <label for="star2">★</label>
+        <input id="star1" type="radio" name="rate" value="1">
+        <label for="star1">★</label>
+    </div>
+</div> 
+{% endblock %}
