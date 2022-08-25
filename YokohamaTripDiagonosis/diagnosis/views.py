@@ -31,18 +31,6 @@ def result(request):
     total=grade_price+grade_personality+grade_pace
     return render(request,"result.html",{"price":price,"personality":personality,"pace":pace,"member":member,"total":total})
 
-def result1(request):
-    return render(request, 'result1.html')
-
-def result2(request):
-    return render(request, 'result2.html')
-
-def result3(request):
-    return render(request, 'result3.html')
-
-def result4(request):
-    return render(request, 'result4.html')
-
 # def judge_result(request):
 #     price=request.GET.get("price")
 #     personality=request.GET.get("personality")
