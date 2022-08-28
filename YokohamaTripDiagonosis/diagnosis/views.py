@@ -1,8 +1,31 @@
 from django.shortcuts import render
-
+from . import models
 # Create your views here.
 def diagnosis_top(request):
-    return render(request, 'diagnosis_top.html')
+    if request:
+        return render(request, 'diagnosis_top.html')
+    else:
+        star1=request.GET.get("star1")
+        star2=request.GET.get("star2")
+        star3=request.GET.get("star3")
+        star4=request.GET.get("star4")
+        star5=request.GET.get("star5")
+        if star5:
+            rate=models.evaluation(evaluation=star5)
+        elif star4:
+            rate=models.evaluation(evaluation=star4)
+        elif star3:
+            rate=models.evaluation(evaluation=star3)
+        elif star2:
+            rate=models.evaluation(evaluation=star2)
+        elif star1:
+            rate=models.evaluation(evaluation=star1)
+        else:
+            rate=models.evaluation(evaluation=0)
+        rate.save()
+        return render(request, 'diagnosis_top.html')
+
+
 
 def diagnosis(request):
     return render(request, 'diagnosis.html')
